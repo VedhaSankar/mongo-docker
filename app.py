@@ -1,5 +1,6 @@
-from pymongo import MongoClient
-import pymongo.errors as pymon_err
+# from pymongo import MongoClient
+# import pymongo.errors as pymon_err
+from pymongo import *
 from dotenv import load_dotenv
 import os
 
