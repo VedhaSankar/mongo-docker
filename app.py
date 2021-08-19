@@ -1,6 +1,6 @@
-# from pymongo import MongoClient
+import pymongo
+from pymongo import MongoClient
 # import pymongo.errors as pymon_err
-from pymongo import *
 from dotenv import load_dotenv
 import os
 
@@ -17,11 +17,11 @@ database = client[DB_NAME]
 
 
 
-def insert_records(data):
+def insert_records():
 
     result = {
 
-        "result"    : "success"
+        "result"    : "1"
 
     }
 
