@@ -2,7 +2,5 @@ version: '3'
 services:
   sample_backend:
     build: .
-    environment:
-      MONGO_URI: ${MONGO_URI}
     ports:
      - "8500:8500"

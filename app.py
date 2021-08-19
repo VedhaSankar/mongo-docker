@@ -21,7 +21,7 @@ def insert_records():
 
     result = {
 
-        "result"    : "1"
+        "result"    : "3"
 
     }
 
