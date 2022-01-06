@@ -27,7 +27,6 @@ def insert_records():
 
     collection_name = 'docker'
     new_collection = database[collection_name]
-
     x = new_collection.insert_one(result)
     print(x)
 
