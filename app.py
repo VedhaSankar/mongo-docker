@@ -30,7 +30,6 @@ def insert_records():
     x = new_collection.insert_one(result)
     print(x)
 
-
 def startpy():
 
     insert_records()
