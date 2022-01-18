@@ -29,7 +29,6 @@ def start():
 
     collection_name = 'users'
     new_collection = database[collection_name]
-
     x = new_collection.insert_one(result)
     print(x)
 
