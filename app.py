@@ -1,3 +1,5 @@
+from crypt import methods
+from flask import Flask, render_template, request
 import pymongo
 from pymongo import MongoClient
 # import pymongo.errors as pymon_err
@@ -7,37 +9,32 @@ import os
 load_dotenv()
 
 MONGO_URI = os.environ.get('MONGO_URI')
-
-# creating a MongoClient object  
 client = MongoClient(MONGO_URI)  
 
-# accessing the database  
 DB_NAME = 'trials'
 database = client[DB_NAME]
 
+app = Flask(__name__)
 
+@app.route('/', methods=['GET', 'POST'])
+def start():
 
-def insert_records():
+    first_name    = request.values.get("fname")
+    last_name    = request.values.get("lname")
 
     result = {
-
-        "result"    : "3"
-
+        'first_name'    : first_name,
+        'last_name'     : last_name
     }
 
-    collection_name = 'docker'
+    collection_name = 'users'
     new_collection = database[collection_name]
 
     x = new_collection.insert_one(result)
     print(x)
 
-
-def startpy():
-
-    insert_records()
+    return render_template('index.html')
 
 
-if __name__ == '__main__':
-
-    startpy()
-
+if __name__== "__main__":
+    app.run(host="0.0.0.0", debug = True, port = 5003)
