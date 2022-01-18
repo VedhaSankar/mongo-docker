@@ -1,6 +1,4 @@
-from crypt import methods
 from flask import Flask, render_template, request
-import pymongo
 from pymongo import MongoClient
 # import pymongo.errors as pymon_err
 from dotenv import load_dotenv
