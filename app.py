@@ -11,7 +11,7 @@ load_dotenv()
 ca = certifi.where()
 
 MONGO_URI = os.environ.get('MONGO_URI')
-client = MongoClient(MONGO_URI, tlsCAFile = ca)  
+client = MongoClient(MONGO_URI)  
 
 DB_NAME = 'trials'
 database = client[DB_NAME]

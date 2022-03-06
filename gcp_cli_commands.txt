@@ -1,0 +1,7 @@
+To make this the default region, run:
+
+    gcloud config set run/region us-central1
+
+
+gcloud builds submit --tag \
+     us-central1-docker.pkg.dev/$PROJECT/my-docker-repo/mongo-docker:latest
