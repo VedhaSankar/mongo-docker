@@ -6,7 +6,7 @@ import os
 
 load_dotenv(override=True)
 
-MONGO_URI = os.environ.get('MONGO_URI')
+MONGO_URI = os.environ.get('MONGO_URI') 
 client = MongoClient(MONGO_URI)  
 
 DB_NAME = 'trials'
